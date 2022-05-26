@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap%27');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height: 30vh;
+    z-index: 0;
+}
+
+/* TITULO */
+
+body main h1 {
+    margin-top: 70px;
+    animation: nomeLoja 5s ease-in-out;
+}
+
+
+
+body main h1 a{
+    font-family: 'Righteous', cursive;
+    color: #efdd3e;
+    font-size: 100px;
+    text-decoration: none;
+}
+
+@keyframes nomeLoja {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* BLACK FRIDAY */
+
+body main h2{
+    margin-top: 80px;
+    margin-bottom: 50px;
+    
+    animation: teste 10s ease-in-out 0.5s 1 alternate;
+}
+
+@keyframes teste {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-1040px);
+    }
+
+    50% {
+        transform: translateX(1040px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#title {
+    font-size: 4.2em;
+}
+
+#black {
+    color: gray;
+}
+
+#friday{
+    color: red;
+}
+
+/* RELOGIO */
+
+#clock h3{
+    position: relative;
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 1.3em;
+}
+
+#clock #time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clock #time div {
+    position: relative;
+    margin: 15px 5px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+}
+
+#rel1 {
+    animation: teste2 10s ease-in-out 0.5s 1 alternate;
+}
+
+#rel2 {
+    animation: teste3 10s ease-in-out 0.5s 1 alternate;
+}
+
+#rel3 {
+    animation: teste4 10s ease-in-out 0.5s 1 alternate;
+}
+
+@keyframes teste2 {
+    0% {
+        transform: translateX(-1250px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes teste3 {
+    0% {
+        transform: translateY(-800px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes teste4 {
+    0% {
+        transform: translatex(1250px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+#clock #time div span {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 80px;
+    background: gray;
+    color: #fff;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.8em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+}
+
+#clock #time div span:nth-child(2){
+    height: 30px;
+    width: 120px;
+    font-size: 0.8em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    box-shadow: none;
+    background: rgb(71, 66, 66);
+    text-transform: uppercase;
+    z-index: 9;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#clock #time div:last-child span {
+    background: red;
+}
+
+#clock #time div:last-child span:nth-child(2) {
+    background: rgb(148, 6, 6);
+}
+
+/*PRODUTOS*/
+
+.card-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 130px;
+    margin-bottom: 40px;
+}
+
+.card {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 30%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.product-name{
+    margin-bottom: 15px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 30px;
+}
+
+.description {
+    text-align: center;
+    margin: 20px 120px;
+    font-size: 15px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.price {
+    font-weight: 600;
+}
+
+.buy-button {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 15px;
+    margin: 5px 0;
+    font-family: 'Montserrat', sans-serif;
+
+    transition-property:all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.buy-button:hover {
+    cursor: pointer;
+    background-color: green;
+    color: #fff;
+
+    transform: scale(1.2);
+}
+
+#img-book {
+    margin: 5px 0;
+    width: 200px;
+    height: 300px;
+    box-shadow: inset 0 0 1em gold, 0 0 2em red;
+
+    transition-property:all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+}
+
+
+#img-book:hover {
+    transform: scale(1.5);
+    border-radius: 20%;
+}
+
+/* COMENTARIOS */
+
+#section-comentario {
+    background: rgb(212, 100, 100);
+    border: outset;
+    border-color: darkgray;   
+}
+
+#h3-comentario{
+    position: relative;
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 2.2em;
+
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
+
+.client-name{
+    margin-top: 35px;
+    /*margin-bottom: 5px;
+    font-family: 'Architects Daughter', cursive;*/
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+.description-client {
+    text-align: center;
+    margin: 20px 120px;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#img-client {
+    margin: 5px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    
+    transition-property:all;
+    transition-duration: 1.5s;
+    transition-timing-function: ease-in-out;
+
+}
+
+#img-client:hover {
+    transform: scale(1.8);
+    border-radius: 30%;
+}
+
+
+
+/* EQUIPE DESENVOLVIMENTO */
+
+
+/* FORMULARIO */
+
+#formulario{
+    padding-top: 100px;
+    padding-bottom: 60px;
+    text-align: center;
+    width: 600px;
+    height: 450px;
+}
+
+#formulario p{
+    font-size: 1.2em;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#div-input-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: pink;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* INPUT */
+
+#nome-input {
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: #000;
+}
+
+#email-input {
+    background: rgb(255, 255, 255);
+    border: 1px solid black;
+    margin-top: 15px;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: #000;
+}
+
+/* BOTAO ENVIAR */
+
+#send-button {
+    background: rgb(212, 100, 100);
+    border: 1px solid black;
+    margin-top: 15px;
+    padding: 5px;
+    color: #000;
+    font-size: 1.2em;
+    border-radius: 10px;
+    
+}
+
+#send-button:hover{
+    cursor: pointer;
+    background: green;
+    color: #fff;
+}
+
+/*FOOTER*/
+
+footer {
+    background: rgb(212, 100, 100);
+    color: #fff;
+
+    padding-top: 40px;
+    padding-bottom: 30px;
+    padding-left: 35px;
+    border: outset;
+    border-color: darkgray;
+}
+
+#div_footer {
+    text-align: center;
+    padding-top: 30px;
+    padding: center;
+}
+
+footer > div > ul > li {
+    margin-top: 10px;
+}
+
+
+/* MEDIA PARA TELA NO MAX 1400PX */
+
+@media (max-width: 1400px) {
+    body main h1 a{
+        font-size: 70px;
+    }
+
+    body main h2 {
+        font-size: 50px;
+    }
+
+    .description {
+        display: none;
+    }
+
+    .price {
+        margin-top: 10px;
+    }
+
+    #img-book {
+        width: 200px;
+        height: 300px;
+        box-shadow: inset 0 0 1em gold, 0 0 2em red;
+    }
+
+    #img-client {
+        margin: 5px 0;
+        width: 100px;
+        height: 100px;
+    }
+    
+}
+
+/* MEDIA PARA TELA NO MAX 930PX */
+
+@media (max-width: 930px) {    
+    body main h1 {
+        font-size: 65px;
+        min-height: 20vh;
+    }
+
+    .buy-button {
+        border-radius: 10px;
+        padding: 7px 90px;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .description {
+        display: none;
+    }
+
+    #img-book {
+        width: 200px;
+        height: 300px;
+        box-shadow: inset 0 0 1em gold, 0 0 2em red;
+    }
+
+    #img-client {
+        margin: 5px 0;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* MEDIA PARA TELA NO MAX 930PX */
+
+@media (max-width: 750px) {    
+    body main h1 a{
+        font-size: 65px;
+        min-height: 20vh;
+    }
+
+    .buy-button {
+        border-radius: 10px;
+        padding: 7px 90px;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .description {
+        display: none;
+    }
+
+    #img-book {
+        width: 200px;
+        height: 300px;
+        box-shadow: inset 0 0 1em gold, 0 0 2em red;
+    }
+
+    #img-client {
+        margin: 5px 0;
+        width: 100px;
+        height: 100px;
+    }
+}
